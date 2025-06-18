@@ -1,49 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>God AI Father – Hyper-Holding</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-image: url('edificio.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-      color: white;
-      text-align: center;
-    }
+<img src="edificio.png" usemap="#floor1map" width="100%" />
 
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
+<map name="floor1map">
+  <!-- سمت چپ طبقه اول (نمایش متن نمونه) -->
+  <area shape="rect" coords="100,600,200,650" href="#text1" alt="متن" onclick="showText('text1'); return false;" />
 
-    h1 {
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
+  <!-- وسط طبقه اول (ویدیو - فعلاً آماده نیست) -->
+  <area shape="rect" coords="210,600,310,650" href="#" alt="ویدیو (در حال آماده‌سازی)" onclick="alert('ویدیو به‌زودی اضافه خواهد شد.'); return false;" />
 
-    .tower {
-      width: 60px;
-      height: 500px;
-      background-color: rgba(0, 0, 255, 0.3);
-      border-radius: 10px;
-    }
-  </style>
-</head>
-<body>
-  <div class="overlay">
-    <h1>GOD AI FATHER HYPER-HOLDING</h1>
-    <div class="tower"></div>
-  </div>
-</body>
-</html>
+  <!-- سمت راست طبقه اول (لینک به طبقه ۲) -->
+  <area shape="rect" coords="320,600,420,650" href="floor2.html" alt="طبقه دوم" />
+</map>
+
+<!-- نمایش متن -->
+<div id="text1" style="display:none; color:white; margin-top:20px; font-size:18px;">
+  <b>God AI Father | طبقه اول</b><br>
+  اینجا نقطه شروع ابرهلدینگ هوش مصنوعی است. از همین‌جا، آینده‌ای تازه برای بشریت آغاز می‌شود...
+</div>
+
+<script>
+  function showText(id) {
+    document.getElementById(id).style.display = 'block';
+  }
+</script>
